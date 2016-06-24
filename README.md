@@ -1,6 +1,6 @@
 # War of Tug
 
-A tug of war game that uses UIKit to display the images and GameplayKit to run the game logic.
+A simple tug of war game that uses UIKit to display the images and GameplayKit to run the game logic.
 
 Other things to note are:
 - CADisplayLink is used to call the game's update loop.
