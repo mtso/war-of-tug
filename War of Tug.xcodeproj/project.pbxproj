@@ -1,0 +1,341 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7F41CD2F1D1CB902008B8A36 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F41CD2E1D1CB902008B8A36 /* AppDelegate.swift */; };
+		7F41CD311D1CB902008B8A36 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F41CD301D1CB902008B8A36 /* ViewController.swift */; };
+		7F41CD341D1CB902008B8A36 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F41CD321D1CB902008B8A36 /* Main.storyboard */; };
+		7F41CD361D1CB902008B8A36 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F41CD351D1CB902008B8A36 /* Assets.xcassets */; };
+		7F41CD391D1CB902008B8A36 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F41CD371D1CB902008B8A36 /* LaunchScreen.storyboard */; };
+		7F41CD431D1CB9EC008B8A36 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F41CD421D1CB9EC008B8A36 /* GameViewController.swift */; };
+		7F41CD461D1CBA4F008B8A36 /* GameState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F41CD451D1CBA4F008B8A36 /* GameState.swift */; };
+		7F41CD4B1D1D1390008B8A36 /* GameStartState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F41CD4A1D1D1390008B8A36 /* GameStartState.swift */; };
+		7F41CD4D1D1D145B008B8A36 /* GamePlayingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F41CD4C1D1D145B008B8A36 /* GamePlayingState.swift */; };
+		7F41CD4F1D1D147B008B8A36 /* GameWinState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F41CD4E1D1D147B008B8A36 /* GameWinState.swift */; };
+		7F41CD511D1D1486008B8A36 /* GameLoseState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F41CD501D1D1486008B8A36 /* GameLoseState.swift */; };
+		7F41CD531D1D1493008B8A36 /* GameTransitionState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F41CD521D1D1493008B8A36 /* GameTransitionState.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		7F41CD2B1D1CB902008B8A36 /* War of Tug.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "War of Tug.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F41CD2E1D1CB902008B8A36 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		7F41CD301D1CB902008B8A36 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		7F41CD331D1CB902008B8A36 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		7F41CD351D1CB902008B8A36 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = "War of Tug/Assets.xcassets"; sourceTree = "<group>"; };
+		7F41CD381D1CB902008B8A36 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		7F41CD3A1D1CB902008B8A36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7F41CD421D1CB9EC008B8A36 /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; name = GameViewController.swift; path = "War of Tug/Game/GameViewController.swift"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		7F41CD451D1CBA4F008B8A36 /* GameState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GameState.swift; path = "War of Tug/Game/States/GameState.swift"; sourceTree = "<group>"; };
+		7F41CD481D1CBA6C008B8A36 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		7F41CD4A1D1D1390008B8A36 /* GameStartState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; name = GameStartState.swift; path = "War of Tug/Game/States/GameStartState.swift"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		7F41CD4C1D1D145B008B8A36 /* GamePlayingState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GamePlayingState.swift; path = "War of Tug/Game/States/GamePlayingState.swift"; sourceTree = "<group>"; };
+		7F41CD4E1D1D147B008B8A36 /* GameWinState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; name = GameWinState.swift; path = "War of Tug/Game/States/GameWinState.swift"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		7F41CD501D1D1486008B8A36 /* GameLoseState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; name = GameLoseState.swift; path = "War of Tug/Game/States/GameLoseState.swift"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		7F41CD521D1D1493008B8A36 /* GameTransitionState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GameTransitionState.swift; path = "War of Tug/Game/States/GameTransitionState.swift"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7F41CD281D1CB902008B8A36 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7F41CD221D1CB902008B8A36 = {
+			isa = PBXGroup;
+			children = (
+				7F41CD481D1CBA6C008B8A36 /* README.md */,
+				7F41CD441D1CBA07008B8A36 /* War of Tug */,
+				7F41CD2D1D1CB902008B8A36 /* War of Tug (iOS) */,
+				7F41CD2C1D1CB902008B8A36 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7F41CD2C1D1CB902008B8A36 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7F41CD2B1D1CB902008B8A36 /* War of Tug.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7F41CD2D1D1CB902008B8A36 /* War of Tug (iOS) */ = {
+			isa = PBXGroup;
+			children = (
+				7F41CD2E1D1CB902008B8A36 /* AppDelegate.swift */,
+				7F41CD301D1CB902008B8A36 /* ViewController.swift */,
+				7F41CD321D1CB902008B8A36 /* Main.storyboard */,
+				7F41CD371D1CB902008B8A36 /* LaunchScreen.storyboard */,
+				7F41CD3A1D1CB902008B8A36 /* Info.plist */,
+			);
+			name = "War of Tug (iOS)";
+			path = "War of Tug";
+			sourceTree = "<group>";
+		};
+		7F41CD441D1CBA07008B8A36 /* War of Tug */ = {
+			isa = PBXGroup;
+			children = (
+				7F41CD421D1CB9EC008B8A36 /* GameViewController.swift */,
+				7F41CD471D1CBA53008B8A36 /* States */,
+				7F41CD351D1CB902008B8A36 /* Assets.xcassets */,
+			);
+			name = "War of Tug";
+			sourceTree = "<group>";
+		};
+		7F41CD471D1CBA53008B8A36 /* States */ = {
+			isa = PBXGroup;
+			children = (
+				7F41CD451D1CBA4F008B8A36 /* GameState.swift */,
+				7F41CD4A1D1D1390008B8A36 /* GameStartState.swift */,
+				7F41CD4C1D1D145B008B8A36 /* GamePlayingState.swift */,
+				7F41CD4E1D1D147B008B8A36 /* GameWinState.swift */,
+				7F41CD501D1D1486008B8A36 /* GameLoseState.swift */,
+				7F41CD521D1D1493008B8A36 /* GameTransitionState.swift */,
+			);
+			name = States;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7F41CD2A1D1CB902008B8A36 /* War of Tug */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7F41CD3D1D1CB902008B8A36 /* Build configuration list for PBXNativeTarget "War of Tug" */;
+			buildPhases = (
+				7F41CD271D1CB902008B8A36 /* Sources */,
+				7F41CD281D1CB902008B8A36 /* Frameworks */,
+				7F41CD291D1CB902008B8A36 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "War of Tug";
+			productName = "War of Tug";
+			productReference = 7F41CD2B1D1CB902008B8A36 /* War of Tug.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7F41CD231D1CB902008B8A36 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Matthew Tso";
+				TargetAttributes = {
+					7F41CD2A1D1CB902008B8A36 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+				};
+			};
+			buildConfigurationList = 7F41CD261D1CB902008B8A36 /* Build configuration list for PBXProject "War of Tug" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7F41CD221D1CB902008B8A36;
+			productRefGroup = 7F41CD2C1D1CB902008B8A36 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7F41CD2A1D1CB902008B8A36 /* War of Tug */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7F41CD291D1CB902008B8A36 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7F41CD391D1CB902008B8A36 /* LaunchScreen.storyboard in Resources */,
+				7F41CD361D1CB902008B8A36 /* Assets.xcassets in Resources */,
+				7F41CD341D1CB902008B8A36 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7F41CD271D1CB902008B8A36 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7F41CD311D1CB902008B8A36 /* ViewController.swift in Sources */,
+				7F41CD511D1D1486008B8A36 /* GameLoseState.swift in Sources */,
+				7F41CD431D1CB9EC008B8A36 /* GameViewController.swift in Sources */,
+				7F41CD4B1D1D1390008B8A36 /* GameStartState.swift in Sources */,
+				7F41CD461D1CBA4F008B8A36 /* GameState.swift in Sources */,
+				7F41CD4D1D1D145B008B8A36 /* GamePlayingState.swift in Sources */,
+				7F41CD4F1D1D147B008B8A36 /* GameWinState.swift in Sources */,
+				7F41CD531D1D1493008B8A36 /* GameTransitionState.swift in Sources */,
+				7F41CD2F1D1CB902008B8A36 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		7F41CD321D1CB902008B8A36 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7F41CD331D1CB902008B8A36 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		7F41CD371D1CB902008B8A36 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7F41CD381D1CB902008B8A36 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7F41CD3B1D1CB902008B8A36 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		7F41CD3C1D1CB902008B8A36 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7F41CD3E1D1CB902008B8A36 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "War of Tug/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mtso.War-of-Tug";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		7F41CD3F1D1CB902008B8A36 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "War of Tug/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mtso.War-of-Tug";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7F41CD261D1CB902008B8A36 /* Build configuration list for PBXProject "War of Tug" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7F41CD3B1D1CB902008B8A36 /* Debug */,
+				7F41CD3C1D1CB902008B8A36 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7F41CD3D1D1CB902008B8A36 /* Build configuration list for PBXNativeTarget "War of Tug" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7F41CD3E1D1CB902008B8A36 /* Debug */,
+				7F41CD3F1D1CB902008B8A36 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7F41CD231D1CB902008B8A36 /* Project object */;
+}
