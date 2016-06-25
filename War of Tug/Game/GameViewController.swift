@@ -24,7 +24,7 @@ class GameViewController: UIViewController {
     /** 
         Multipurpose game beginning button that 
         also serves as the game over text label.
-     */
+    */
     var button: UIButton?
     var rope: UIImageView?
     var threshold: UIImageView?
@@ -114,11 +114,11 @@ class GameViewController: UIViewController {
     func tugAction(entity who: Entity) -> () {
         
         let tugDistance: CGFloat = 20
+        let tugDirection = who == .player ? tugDistance : -tugDistance
 
         func tugAction() {
             UIView.animate(withDuration: 0.1, delay: 0, options: .curveEaseOut, animations: {
                 
-                let tugDirection = who == .player ? tugDistance : -tugDistance
                 self.rope!.frame.origin.y += tugDirection
                 
                 }, completion: { _ in

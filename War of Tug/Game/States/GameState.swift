@@ -9,6 +9,10 @@
 import UIKit
 import GameplayKit
 
+/** 
+    This is the base GKState class that the other game states
+    inherit from. Keeps a reference to the game's view controller.
+*/
 class GameState: GKState {
 
     unowned let controller: GameViewController
