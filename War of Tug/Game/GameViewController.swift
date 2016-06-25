@@ -31,12 +31,12 @@ class GameViewController: UIViewController {
 
     /// The `CADisplayLink` object that calls the update loop.
     var displayLink: CADisplayLink!
-    var previousUpdateTime: NSTimeInterval = 0
+    var previousUpdateTime: TimeInterval = 0
     
     /// Used to determine who is tugging.
     enum Entity {
-        case Player
-        case Opponent
+        case player
+        case opponent
     }
     
     init() {
@@ -44,14 +44,14 @@ class GameViewController: UIViewController {
         
         // Set up CADisplayLink for the game update loop.
         displayLink = CADisplayLink(target: self, selector: #selector(update))
-        displayLink.addToRunLoop(NSRunLoop.mainRunLoop(), forMode: NSDefaultRunLoopMode)
+        displayLink.add(to: RunLoop.main(), forMode: RunLoopMode.defaultRunLoopMode.rawValue)
         
-        view.backgroundColor = UIColor.whiteColor()
+        view.backgroundColor = UIColor.white()
         
-        button = UIButton(type: UIButtonType.System)
-        button?.addTarget(self, action: #selector(buttonClick), forControlEvents: .TouchUpInside)
-        button?.backgroundColor = UIColor.grayColor()
-        button?.setTitleColor(UIColor.whiteColor(), forState: .Normal)
+        button = UIButton(type: UIButtonType.system)
+        button?.addTarget(self, action: #selector(buttonClick), for: .touchUpInside)
+        button?.backgroundColor = UIColor.gray()
+        button?.setTitleColor(UIColor.white(), for: UIControlState())
 
         rope = UIImageView(image: UIImage(named: "rope"))
         threshold = UIImageView(image: UIImage(named: "threshold"))
@@ -81,7 +81,7 @@ class GameViewController: UIViewController {
         ])
     }
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         // Enter GameStartState after view appears 
         // because of the intro animation to the play button.
         stateMachine.enterState(GameStartState.self)
@@ -96,10 +96,10 @@ class GameViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         switch stateMachine.currentState {
         case is GamePlayingState:
-            tugAction(entity: .Player)
+            tugAction(entity: .player)
 
         default:
             break
@@ -116,9 +116,9 @@ class GameViewController: UIViewController {
         let tugDistance: CGFloat = 20
 
         func tugAction() {
-            UIView.animateWithDuration(0.1, delay: 0, options: .CurveEaseOut, animations: {
+            UIView.animate(withDuration: 0.1, delay: 0, options: .curveEaseOut, animations: {
                 
-                let tugDirection = who == .Player ? tugDistance : -tugDistance
+                let tugDirection = who == .player ? tugDistance : -tugDistance
                 self.rope!.frame.origin.y += tugDirection
                 
                 }, completion: { _ in
@@ -140,7 +140,7 @@ class GameViewController: UIViewController {
         let timeSincePreviousUpdate = displayLink.timestamp - previousUpdateTime
         previousUpdateTime = displayLink.timestamp
 
-        stateMachine.updateWithDeltaTime(timeSincePreviousUpdate)
+        stateMachine.update(withDeltaTime: timeSincePreviousUpdate)
     }
 
 }

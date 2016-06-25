@@ -11,23 +11,23 @@ import GameplayKit
 
 class GamePlayingState: GameState {
 
-    static let opponentTugInterval: NSTimeInterval = 1.0
-    var tugTimeCounter: NSTimeInterval = 0    
+    static let opponentTugInterval: TimeInterval = 1.0
+    var tugTimeCounter: TimeInterval = 0    
     
-    override func updateWithDeltaTime(seconds: NSTimeInterval) {
+    override func update(withDeltaTime seconds: TimeInterval) {
         tugTimeCounter += seconds
         
         if tugTimeCounter > GamePlayingState.opponentTugInterval {
-            controller.tugAction(entity: .Opponent)
+            controller.tugAction(entity: .opponent)
             tugTimeCounter = 0
         }
     }
     
-    override func willExitWithNextState(nextState: GKState) {
+    override func willExit(withNextState nextState: GKState) {
         controller.threshold?.layer.transform = ZeroScaleX
     }
     
-    override func isValidNextState(stateClass: AnyClass) -> Bool {
+    override func isValidNextState(_ stateClass: AnyClass) -> Bool {
         switch stateClass {
         case is GameWinState.Type, is GameLoseState.Type:
             return true

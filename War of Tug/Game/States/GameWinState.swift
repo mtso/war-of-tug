@@ -11,10 +11,10 @@ import GameplayKit
 
 class GameWinState: GameState {
 
-    override func didEnterWithPreviousState(previousState: GKState?) {
+    override func didEnter(withPreviousState previousState: GKState?) {
         let extend = CATransform3DMakeScale(1, 1, 1)
         
-        UIView.animateWithDuration(0.5, delay: 0, options: .CurveEaseIn, animations: {
+        UIView.animate(withDuration: 0.5, delay: 0, options: .curveEaseIn, animations: {
             self.controller.rope?.frame.origin.y = self.controller.view.frame.height
             
             self.controller.button?.layer.transform = extend
@@ -25,13 +25,13 @@ class GameWinState: GameState {
         
         var win_title: String?
         if let asset = NSDataAsset(name: "win_title") {
-            win_title = String(data: asset.data, encoding: NSUTF8StringEncoding)
+            win_title = String(data: asset.data, encoding: String.Encoding.utf8)
         }
 
-        controller.button?.setTitle(win_title, forState: .Normal)
+        controller.button?.setTitle(win_title, for: UIControlState())
     }
     
-    override func isValidNextState(stateClass: AnyClass) -> Bool {
+    override func isValidNextState(_ stateClass: AnyClass) -> Bool {
         return stateClass is GameTransitionState.Type
     }
 }

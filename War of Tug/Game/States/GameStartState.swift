@@ -11,14 +11,14 @@ import GameplayKit
 
 class GameStartState: GameState {
 
-    override func didEnterWithPreviousState(previousState: GKState?) {
-        super.didEnterWithPreviousState(previousState)
+    override func didEnter(withPreviousState previousState: GKState?) {
+        super.didEnter(withPreviousState: previousState)
         
         let view = controller.view
         
         if let rope = controller.rope{
-            rope.frame = CGRect(x: view.center.x - rope.frame.width / 2,
-                                y: view.center.y - rope.frame.height / 2,
+            rope.frame = CGRect(x: (view?.center.x)! - rope.frame.width / 2,
+                                y: (view?.center.y)! - rope.frame.height / 2,
                                 width: rope.frame.width, height: rope.frame.height)
 
             rope.layer.transform = ZeroScaleY
@@ -26,8 +26,8 @@ class GameStartState: GameState {
         }
         
         if let threshold = controller.threshold {
-            threshold.frame = CGRect(x: view.center.x - threshold.frame.width / 2,
-                                     y: view.center.y - threshold.frame.height / 2,
+            threshold.frame = CGRect(x: (view?.center.x)! - threshold.frame.width / 2,
+                                     y: (view?.center.y)! - threshold.frame.height / 2,
                                      width: threshold.frame.width, height: threshold.frame.height)
             
             threshold.layer.transform = ZeroScaleX
@@ -37,12 +37,12 @@ class GameStartState: GameState {
             let buttonSize = CGSize(width: 160, height: 40)
             
             button.frame = CGRect(
-                x: view.center.x - buttonSize.width / 2,
-                y: view.center.y - buttonSize.height / 2,
+                x: (view?.center.x)! - buttonSize.width / 2,
+                y: (view?.center.y)! - buttonSize.height / 2,
                 width: buttonSize.width,
                 height: buttonSize.height)
             
-            UIView.animateWithDuration(0.5, animations: {
+            UIView.animate(withDuration: 0.5, animations: {
                 button.alpha = 1
                 button.layer.transform = NormalScale
             })
@@ -50,15 +50,15 @@ class GameStartState: GameState {
         
         var playTitle: String?
         if let asset = NSDataAsset(name: "play_title") {
-            playTitle = String(data: asset.data, encoding: NSUTF8StringEncoding)
+            playTitle = String(data: asset.data, encoding: String.Encoding.utf8)
         }
-        controller.button?.setTitle(playTitle, forState: .Normal)
+        controller.button?.setTitle(playTitle, for: UIControlState())
     }
     
-    override func willExitWithNextState(nextState: GKState) {
+    override func willExit(withNextState nextState: GKState) {
         self.controller.rope?.alpha = 1
 
-        UIView.animateWithDuration(0.5, delay: 0, options: .CurveEaseOut, animations: {
+        UIView.animate(withDuration: 0.5, delay: 0, options: .curveEaseOut, animations: {
             
             self.controller.button?.layer.transform = ZeroScaleY
             
@@ -68,7 +68,7 @@ class GameStartState: GameState {
             }, completion: nil)
     }
     
-    override func isValidNextState(stateClass: AnyClass) -> Bool {
+    override func isValidNextState(_ stateClass: AnyClass) -> Bool {
         return stateClass is GamePlayingState.Type
     }
 }

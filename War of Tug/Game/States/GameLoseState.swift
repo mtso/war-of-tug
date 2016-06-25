@@ -11,10 +11,10 @@ import GameplayKit
 
 class GameLoseState: GameState {
 
-    override func didEnterWithPreviousState(previousState: GKState?) {
+    override func didEnter(withPreviousState previousState: GKState?) {
         let extend = CATransform3DMakeScale(1, 1, 1)
         
-        UIView.animateWithDuration(0.5, delay: 0, options: .CurveEaseIn, animations: {
+        UIView.animate(withDuration: 0.5, delay: 0, options: .curveEaseIn, animations: {
             
             self.controller.rope?.frame.origin.y = self.controller.view.frame.origin.y - self.controller.rope!.frame.height
             
@@ -26,14 +26,14 @@ class GameLoseState: GameState {
 
         var lose_title: String?
         if let asset = NSDataAsset(name: "lose_title") {
-            lose_title = String(data: asset.data, encoding: NSUTF8StringEncoding)
+            lose_title = String(data: asset.data, encoding: String.Encoding.utf8)
         }
         
-        controller.button?.setTitle(lose_title, forState: .Normal)
+        controller.button?.setTitle(lose_title, for: UIControlState())
 
     }
 
-    override func isValidNextState(stateClass: AnyClass) -> Bool {
+    override func isValidNextState(_ stateClass: AnyClass) -> Bool {
         return stateClass is GameTransitionState.Type
     }
 }

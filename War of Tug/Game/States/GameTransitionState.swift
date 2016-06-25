@@ -11,12 +11,12 @@ import GameplayKit
 
 class GameTransitionState: GameState {
     
-    static let transitionInterval: NSTimeInterval = 2.0
-    var transitionTimeCounter: NSTimeInterval = 0
+    static let transitionInterval: TimeInterval = 2.0
+    var transitionTimeCounter: TimeInterval = 0
     
     var particleEmitter: CAEmitterLayer?
 
-    override func didEnterWithPreviousState(previousState: GKState?) {
+    override func didEnter(withPreviousState previousState: GKState?) {
         if previousState is GameWinState {
             particleEmitter = CAEmitterLayer()
             particleEmitter?.emitterPosition = controller.view.center
@@ -27,7 +27,7 @@ class GameTransitionState: GameState {
             particle.birthRate = 25
             particle.lifetime = 1
             particle.lifetimeRange = 0.5
-            particle.color = UIColor.grayColor().CGColor
+            particle.color = UIColor.gray().cgColor
             particle.spinRange = 6
             particle.scaleSpeed = -0.1
             particle.emissionLongitude = 6
@@ -36,19 +36,19 @@ class GameTransitionState: GameState {
             particle.scale = 0.5
             particle.velocity = 300
             particle.yAcceleration = 300
-            particle.contents = UIImage(named: "tug_particle")?.CGImage
+            particle.contents = UIImage(named: "tug_particle")?.cgImage
             
             particleEmitter?.emitterCells = [particle]
             
-            controller.view.layer.insertSublayer(particleEmitter!, atIndex: 0)
+            controller.view.layer.insertSublayer(particleEmitter!, at: 0)
         }
     }
     
-    override func isValidNextState(stateClass: AnyClass) -> Bool {
+    override func isValidNextState(_ stateClass: AnyClass) -> Bool {
         return stateClass is GameStartState.Type
     }
     
-    override func updateWithDeltaTime(seconds: NSTimeInterval) {
+    override func update(withDeltaTime seconds: TimeInterval) {
         transitionTimeCounter += seconds
         
         if transitionTimeCounter > GameTransitionState.transitionInterval {

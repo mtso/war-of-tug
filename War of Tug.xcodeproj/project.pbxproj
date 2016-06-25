@@ -137,6 +137,7 @@
 					7F41CD2A1D1CB902008B8A36 = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = RZ2DT6A2TM;
+						LastSwiftMigration = 0800;
 					};
 				};
 			};
@@ -302,6 +303,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mtso.War-of-Tug";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -314,6 +316,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mtso.War-of-Tug";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};

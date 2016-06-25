@@ -10,12 +10,12 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         
         let gameViewController = GameViewController()
         
         // Present the game's view controller.
-        presentViewController(gameViewController, animated: false, completion: nil)
+        present(gameViewController, animated: false, completion: nil)
     }
 
     override func didReceiveMemoryWarning() {
