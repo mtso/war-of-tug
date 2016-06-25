@@ -128,8 +128,6 @@ class GameViewController: UIViewController {
         return tugAction()
     }
     
-
-    
     func checkGameOver() {
         if rope?.frame.origin.y > threshold?.frame.origin.y {
             stateMachine.enterState(GameWinState)
